@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://shaders/Transition.shader" type="Shader" id=1]
+[ext_resource path="res://art/ShaderResources/transition_mask.svg" type="Texture" id=2]
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 1 )
+shader_param/cutoff = 1.0
+shader_param/smooth_size = 0.1
+shader_param/mask = ExtResource( 2 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "Show"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/cutoff")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[node name="Transition" type="CanvasLayer"]
+
+[node name="Transition" type="ColorRect" parent="."]
+pause_mode = 2
+material = SubResource( 3 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Transition"]
+anims/Show = SubResource( 4 )
