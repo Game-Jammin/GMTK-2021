@@ -30,6 +30,12 @@ config/name="GMTK-2021"
 run/main_scene="res://Game.tscn"
 config/icon="res://art/temp/icon.png"
 
+[autoload]
+
+SceneManager="*res://singletons/SceneManager.gd"
+Transition="*res://singletons/Transition.tscn"
+Global="*res://singletons/Global.gd"
+
 [display]
 
 window/size/width=1920
