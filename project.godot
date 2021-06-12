@@ -34,6 +34,7 @@ config/icon="res://art/temp/icon.png"
 
 SceneManager="*res://singletons/SceneManager.gd"
 Transition="*res://singletons/Transition.tscn"
+Global="*res://singletons/Global.gd"
 
 [display]
 
