@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/LazyManGrunt 1 [2021-06-12 182126].wav-85af628f2e3f65083466428ee59db189.sample"
+
+[deps]
+
+source_file="res://SFX/LazyManGrunt 1 [2021-06-12 182126].wav"
+dest_files=[ "res://.import/LazyManGrunt 1 [2021-06-12 182126].wav-85af628f2e3f65083466428ee59db189.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
