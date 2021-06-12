@@ -20,6 +20,7 @@ export (float) var fuse_length = 10
 var can_jump = false
 
 var direction = 0
+var facing_right = false
 var velocity = Vector2.ZERO
 
 func _ready():
@@ -39,16 +40,19 @@ func animation_handler():
 	if is_on_floor():
 		if direction == 0:
 			#Idle
-			animate_sprite.animation = "Idle"
+			if facing_right:
+				animate_sprite.animation = "IdleRight"
+			else:
+				animate_sprite.animation = "IdleLeft"
 		else:
 			#Walking
-			if direction > 0:
+			if facing_right:
 				animate_sprite.animation = "RunRight"
 			else:
 				animate_sprite.animation = "RunLeft"
 	else:
 		#Jump
-		if direction > 0:
+		if facing_right:
 			animate_sprite.animation = "JumpRight"
 		else:
 			animate_sprite.animation = "Jumpleft"

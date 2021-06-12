@@ -25,6 +25,9 @@ func move():
 	
 	if linked_character:
 		move_linked()
+	
+	if direction != 0:
+		facing_right = direction > 0
 
 func move_linked():
 	linked_character.update_direction(direction)

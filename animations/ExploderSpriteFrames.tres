@@ -4,6 +4,31 @@
 animations = [ {
 "frames": [  ],
 "loop": true,
-"name": "default",
+"name": "RunRight",
+"speed": 24.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "JumpLeft",
+"speed": 24.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "RunLeft",
+"speed": 24.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "JumpRight",
+"speed": 24.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "IdleLeft",
+"speed": 24.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "IdleRight",
 "speed": 5.0
 } ]

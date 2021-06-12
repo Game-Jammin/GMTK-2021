@@ -11,6 +11,9 @@ func move():
 		velocity.x = lerp(velocity.x, direction * speed, acceleration)
 	else:
 		velocity.x = lerp(velocity.x, 0, friction)
+		
+	if direction != 0:
+		facing_right = direction > 0
 
 func _process(_delta):
 	animation_handler()
