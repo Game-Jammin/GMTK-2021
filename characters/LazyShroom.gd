@@ -1,9 +1,8 @@
 extends Character
 
-export (float) var link_radius = 300
+export (float) var link_radius = 500
 var linked_character = null
 
-var direction = 0
 var mouse_down = false
 
 var line_target = Vector2.ZERO
@@ -34,14 +33,16 @@ func _process(delta):
 	$Radius.visible = Input.is_action_pressed("left_click")
 	update_link()
 	
-	if Input.is_action_pressed("left_click") or Input.is_action_pressed("right_click"):
+	if Input.is_action_just_pressed("left_click") or Input.is_action_just_pressed("right_click"):
 		linked_character = null
+		Global.change_linked(linked_character)
 	if Input.is_action_just_released("left_click"):
 		#set linked character if mouse is over
 		var linkable_characters = get_tree().get_nodes_in_group("LinkableCharacters")
 		for character in linkable_characters:
 			if character.mouse_over and global_position.distance_to(character.global_position) <= link_radius:
 				linked_character = character
+		Global.change_linked(linked_character)
 
 func _physics_process(delta):
 	if is_on_floor():
@@ -51,6 +52,7 @@ func _physics_process(delta):
 	if linked_character:
 		if global_position.distance_to(linked_character.global_position) > link_radius:
 			linked_character = null
+			Global.change_linked(linked_character)
 	
 	move()
 	if linked_character:
