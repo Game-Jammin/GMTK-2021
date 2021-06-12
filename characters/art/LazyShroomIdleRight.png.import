@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PanicManJumpRight.png-8e0a8ffd3d7e10e5fe24a65a4654bd71.stex"
+path="res://.import/LazyShroomIdleRight.png-3e49258d1ef07dc1e061bc360dc47ef6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/PanicManJumpRight.png"
-dest_files=[ "res://.import/PanicManJumpRight.png-8e0a8ffd3d7e10e5fe24a65a4654bd71.stex" ]
+source_file="res://characters/art/LazyShroomIdleRight.png"
+dest_files=[ "res://.import/LazyShroomIdleRight.png-3e49258d1ef07dc1e061bc360dc47ef6.stex" ]
 
 [params]
 

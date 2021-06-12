@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/PanicManGrunt [2021-06-12 125651].wav-c55d5f3e297bc7ac0bd69f04f061f05a.sample"
+
+[deps]
+
+source_file="res://sounds/SFX/PanicManGrunt [2021-06-12 125651].wav"
+dest_files=[ "res://.import/PanicManGrunt [2021-06-12 125651].wav-c55d5f3e297bc7ac0bd69f04f061f05a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
