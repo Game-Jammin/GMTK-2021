@@ -25,6 +25,7 @@ editor_draw_drag_margin = true
 
 [node name="Escort" parent="." instance=ExtResource( 5 )]
 position = Vector2( 378.147, 698.234 )
+link_radius = 500.0
 
 [node name="PanicMan" parent="." instance=ExtResource( 3 )]
 position = Vector2( 995.053, 682.076 )
