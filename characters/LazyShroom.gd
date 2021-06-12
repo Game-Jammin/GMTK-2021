@@ -1,6 +1,6 @@
 extends Character
 
-export (float) var link_radius = 300
+export (float) var link_radius = 500
 var linked_character = null
 
 var mouse_down = false
@@ -52,6 +52,7 @@ func _physics_process(delta):
 	if linked_character:
 		if global_position.distance_to(linked_character.global_position) > link_radius:
 			linked_character = null
+			Global.change_linked(linked_character)
 	
 	move()
 	if linked_character:

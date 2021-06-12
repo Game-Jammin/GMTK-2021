@@ -22,6 +22,7 @@ texture = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="FuseTimer" type="Timer" parent="."]
+one_shot = true
 
 [node name="CountdownLabel" type="Label" parent="."]
 visible = false

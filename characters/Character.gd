@@ -22,6 +22,7 @@ var velocity = Vector2.ZERO
 
 func _ready():
 	Global.connect("linked_changed", self, '_on_linked_changed')
+	$FuseTimer.connect('timeout', self, '_on_FuseTimer_timeout')
 
 func jump():
 	if can_jump:
@@ -32,15 +33,17 @@ func coyoteTime():
 	can_jump = false
 
 func _on_linked_changed(character):
-	print (character)
 	if character == null:
 		if $FuseTimer.is_stopped():
 			$FuseTimer.start(fuse_length)
 	elif is_escort:
 		$FuseTimer.stop()
 	elif not is_escort:
-		if character.name == name:
+		if character.name != name:
 			if $FuseTimer.is_stopped():
 				$FuseTimer.start(fuse_length)
 		else:
 			$FuseTimer.stop()
+
+func _on_FuseTimer_timeout():
+	print ("Boom!")
