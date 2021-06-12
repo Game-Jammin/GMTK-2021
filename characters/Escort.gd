@@ -32,6 +32,7 @@ func move_linked():
 
 func _process(delta):
 	$Radius.visible = Input.is_action_pressed("left_click")
+	update_link()
 	
 	if Input.is_action_pressed("left_click") or Input.is_action_pressed("right_click"):
 		linked_character = null
@@ -41,10 +42,11 @@ func _process(delta):
 		for character in linkable_characters:
 			if character.mouse_over and global_position.distance_to(character.global_position) <= link_radius:
 				linked_character = character
-				
-	update_link()
 
 func _physics_process(delta):
+	if is_on_floor():
+		can_jump = true
+	
 	# disconnect if characters move to far from each other
 	if linked_character:
 		if global_position.distance_to(linked_character.global_position) > link_radius:
@@ -76,8 +78,11 @@ func update_link():
 	if line_target.length() > link_radius:
 		line_target = line_target.normalized() * link_radius
 	
-	$Tween.interpolate_method(self, "update_line_point", $Line2D.points[1], line_target, 0.05)
-	$Tween.start()
+	if (linked_character):
+		$Line2D.points[1] = line_target
+	else:
+		$Tween.interpolate_method(self, "update_line_point", $Line2D.points[1], line_target, 0.05)
+		$Tween.start()
 
 func update_line_point(new_pos):
 	$Line2D.set_point_position(1, new_pos)

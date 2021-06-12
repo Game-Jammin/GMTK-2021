@@ -13,7 +13,7 @@ script = ExtResource( 2 )
 friction = 0.3
 
 [node name="Line2D" type="Line2D" parent="."]
-points = PoolVector2Array( 0, 0, 100, 0 )
+points = PoolVector2Array( 0, 0, 0, 0 )
 width = 2.0
 default_color = Color( 1, 1, 1, 1 )
 
@@ -28,3 +28,6 @@ shape = SubResource( 1 )
 
 [node name="Radius" type="Sprite" parent="."]
 texture = ExtResource( 3 )
+
+[node name="JumpTimer" type="Timer" parent="."]
+one_shot = true
