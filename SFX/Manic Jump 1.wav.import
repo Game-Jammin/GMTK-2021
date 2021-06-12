@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Manic Jump 1.wav-c89db5d0ad7e4c682eb05b4e36ae399b.sample"
+
+[deps]
+
+source_file="res://SFX/Manic Jump 1.wav"
+dest_files=[ "res://.import/Manic Jump 1.wav-c89db5d0ad7e4c682eb05b4e36ae399b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
