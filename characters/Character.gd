@@ -17,6 +17,8 @@ export (float) var coyote_time = 0.05
 
 export (float) var fuse_length = 10
 
+export (bool) var can_die = false
+
 var can_jump = false
 
 var direction = 0
@@ -72,8 +74,14 @@ func _on_linked_changed(character):
 		else:
 			$FuseTimer.stop()
 
-func _on_FuseTimer_timeout():
+func explode():
 	var new_explosion = load(explosion).instance()
 	new_explosion.global_position = global_position
 	get_parent().add_child(new_explosion)
 	queue_free()
+
+func _on_FuseTimer_timeout():
+	explode()
+	if not can_die:
+		get_parent().lose()
+	

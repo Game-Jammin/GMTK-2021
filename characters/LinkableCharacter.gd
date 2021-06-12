@@ -3,6 +3,8 @@ class_name LinkableCharacter
 
 var mouse_over = false
 
+export (bool) var satisfied = false
+
 func update_direction(new_direction):
 	direction = new_direction
 

@@ -16,6 +16,7 @@
 input_pickable = true
 script = ExtResource( 2 )
 friction = 0.3
+can_die = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = ExtResource( 4 )

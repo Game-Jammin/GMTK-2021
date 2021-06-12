@@ -1,20 +1,21 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://characters/components/Explosion.gd" type="Script" id=1]
 [ext_resource path="res://art/explosion_particle.svg" type="Texture" id=2]
+[ext_resource path="res://sounds/SFX/PanicMan Explosion 1.wav" type="AudioStream" id=3]
 
-[sub_resource type="Gradient" id=2]
+[sub_resource type="Gradient" id=1]
 offsets = PoolRealArray( 0, 0.725686, 1 )
 colors = PoolColorArray( 1, 0, 0, 1, 1, 0.629883, 0, 1, 0.615686, 0.615686, 0.615686, 0.0980392 )
 
-[sub_resource type="GradientTexture" id=3]
-gradient = SubResource( 2 )
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
 
-[sub_resource type="Curve" id=1]
+[sub_resource type="Curve" id=3]
 _data = [ Vector2( 0, 0 ), 0.0, 3.44186, 0, 0, Vector2( 0.988636, 0.636364 ), -1.91411, 0.0, 0, 0 ]
 
 [sub_resource type="CurveTexture" id=4]
-curve = SubResource( 1 )
+curve = SubResource( 3 )
 
 [sub_resource type="ParticlesMaterial" id=5]
 flag_disable_z = true
@@ -27,7 +28,7 @@ orbit_velocity_random = 0.0
 angle = 90.0
 angle_random = 1.0
 scale_curve = SubResource( 4 )
-color_ramp = SubResource( 3 )
+color_ramp = SubResource( 2 )
 
 [node name="Explosion" type="Node2D"]
 script = ExtResource( 1 )
@@ -40,3 +41,8 @@ one_shot = true
 explosiveness = 0.75
 process_material = SubResource( 5 )
 texture = ExtResource( 2 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+bus = "SFX"

@@ -66,5 +66,9 @@ bus = "SFX"
 [node name="Unlink" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 7 )
 bus = "SFX"
+
+[node name="Explode" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
+bus = "SFX"
 [connection signal="mouse_entered" from="." to="." method="_on_Exploder_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_Exploder_mouse_exited"]

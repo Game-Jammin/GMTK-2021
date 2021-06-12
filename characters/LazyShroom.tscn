@@ -22,6 +22,7 @@ speed = 250
 friction = 0.3
 
 [node name="Line2D" type="Line2D" parent="."]
+z_index = -1
 points = PoolVector2Array( 0, 0, 0, 0 )
 width = 2.0
 default_color = Color( 1, 1, 1, 1 )
@@ -31,7 +32,7 @@ position = Vector2( 0, -2 )
 scale = Vector2( 0.3, 0.3 )
 frames = ExtResource( 5 )
 animation = "IdleLeft"
-frame = 9
+frame = 2
 playing = true
 
 [node name="Tween" type="Tween" parent="."]
