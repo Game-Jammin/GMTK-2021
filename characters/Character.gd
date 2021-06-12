@@ -1,6 +1,7 @@
 extends KinematicBody2D
-
 class_name Character
+
+onready var explosion = 'res://characters/components/Explosion.tscn'
 
 export (bool) var is_escort = false
 
@@ -46,4 +47,7 @@ func _on_linked_changed(character):
 			$FuseTimer.stop()
 
 func _on_FuseTimer_timeout():
-	print ("Boom!")
+	var new_explosion = load(explosion).instance()
+	new_explosion.global_position = global_position
+	get_parent().add_child(new_explosion)
+	queue_free()
