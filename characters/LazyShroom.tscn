@@ -32,7 +32,7 @@ position = Vector2( 0, -2 )
 scale = Vector2( 0.3, 0.3 )
 frames = ExtResource( 5 )
 animation = "IdleLeft"
-frame = 2
+frame = 8
 playing = true
 
 [node name="Tween" type="Tween" parent="."]

@@ -5,12 +5,17 @@ var current_scene = null
 func _ready():
 	var root = get_tree().get_root()
 	current_scene = root.get_child(root.get_child_count() - 1)
+	Transition.get_node("AnimationPlayer").play("Show")
 	
 func goto_scene(path):
 	call_deferred("_deferred_goto_scene", path)
 
+func reload_scene():
+	call_deferred("_deferred_goto_scene", current_scene.get_filename())
+
 func _deferred_goto_scene(path):
-	Transition.get_node("Transition/AnimationPlayer").play_backwards("Show")
+	Transition.get_node("AnimationPlayer").play_backwards("Show")
+	yield(Transition.get_node("AnimationPlayer"), "animation_finished")
 	# It is now safe to remove the current scene
 	current_scene.free()
 	
@@ -27,4 +32,4 @@ func _deferred_goto_scene(path):
 	get_tree().set_current_scene(current_scene)
 	
 	get_tree().paused = false
-	Transition.get_node("Transition/AnimationPlayer").play("Show")
+	Transition.get_node("AnimationPlayer").play("Show")
