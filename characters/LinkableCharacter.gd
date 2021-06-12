@@ -14,6 +14,9 @@ func move():
 		velocity.x = lerp(velocity.x, 0, friction)
 
 func _physics_process(delta):
+	if is_on_floor():
+		can_jump = true
+		
 	move()
 	direction = 0
 	# Apply gravity to character
