@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://characters/Survivor.tscn" type="PackedScene" id=1]
+[ext_resource path="res://characters/Exploder.tscn" type="PackedScene" id=1]
 [ext_resource path="res://art/temp/icon.png" type="Texture" id=2]
-[ext_resource path="res://characters/PanicMan.tscn" type="PackedScene" id=3]
+[ext_resource path="res://characters/PanicShroom.tscn" type="PackedScene" id=3]
 [ext_resource path="res://CameraTarget.gd" type="Script" id=4]
-[ext_resource path="res://characters/Escort.tscn" type="PackedScene" id=5]
+[ext_resource path="res://characters/LazyShroom.tscn" type="PackedScene" id=5]
 [ext_resource path="res://ui/Pause.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -23,15 +23,14 @@ drag_margin_bottom = 0.5
 editor_draw_limits = true
 editor_draw_drag_margin = true
 
-[node name="Escort" parent="." instance=ExtResource( 5 )]
-position = Vector2( 378.147, 698.234 )
-link_radius = 500.0
+[node name="Exploder" parent="." instance=ExtResource( 1 )]
+position = Vector2( 494.29, 811.585 )
 
-[node name="PanicMan" parent="." instance=ExtResource( 3 )]
-position = Vector2( 995.053, 682.076 )
+[node name="PanicShroom" parent="." instance=ExtResource( 3 )]
+position = Vector2( 695.027, 779.208 )
 
-[node name="Survivor" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1247.59, 684.234 )
+[node name="LazyShroom" parent="." instance=ExtResource( 5 )]
+position = Vector2( 893.607, 807.268 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 853.076, 941.799 )

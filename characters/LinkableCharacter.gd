@@ -2,7 +2,6 @@ extends Character
 class_name LinkableCharacter
 
 var mouse_over = false
-var direction = 0
 
 func update_direction(new_direction):
 	direction = new_direction
