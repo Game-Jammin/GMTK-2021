@@ -2,6 +2,7 @@ extends KinematicBody2D
 class_name Character
 
 onready var explosion = 'res://characters/components/Explosion.tscn'
+onready var animate_sprite = $AnimatedSprite
 
 export (bool) var is_escort = false
 
@@ -27,11 +28,30 @@ func _ready():
 
 func jump():
 	if can_jump:
+		can_jump = false
 		velocity.y = jump_speed
 
 func coyoteTime():
 	yield(get_tree().create_timer(coyote_time), 'timeout')
 	can_jump = false
+
+func animation_handler():
+	if is_on_floor():
+		if direction == 0:
+			#Idle
+			animate_sprite.animation = "Idle"
+		else:
+			#Walking
+			if direction > 0:
+				animate_sprite.animation = "RunRight"
+			else:
+				animate_sprite.animation = "RunLeft"
+	else:
+		#Jump
+		if direction > 0:
+			animate_sprite.animation = "JumpRight"
+		else:
+			animate_sprite.animation = "Jumpleft"
 
 func _on_linked_changed(character):
 	if character == null:
