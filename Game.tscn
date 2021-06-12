@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://characters/Exploder.tscn" type="PackedScene" id=1]
+[ext_resource path="res://characters/ManicShroom.tscn" type="PackedScene" id=1]
 [ext_resource path="res://art/temp/icon.png" type="Texture" id=2]
 [ext_resource path="res://characters/PanicShroom.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Camera.tscn" type="PackedScene" id=4]

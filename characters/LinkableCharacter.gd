@@ -12,6 +12,9 @@ func move():
 	else:
 		velocity.x = lerp(velocity.x, 0, friction)
 
+func _process(_delta):
+	animation_handler()
+
 func _physics_process(delta):
 	if is_on_floor():
 		can_jump = true

@@ -26,7 +26,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="GMTK-2021"
+config/name="Boom Shrooms"
 run/main_scene="res://ui/Main Menu.tscn"
 config/icon="res://art/temp/icon.png"
 

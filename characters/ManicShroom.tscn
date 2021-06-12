@@ -1,13 +1,14 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://art/temp/drawing.svg" type="Texture" id=1]
-[ext_resource path="res://characters/Exploder.gd" type="Script" id=2]
+[ext_resource path="res://characters/ManicShroom.gd" type="Script" id=2]
 [ext_resource path="res://characters/components/CountdownLabel.gd" type="Script" id=3]
 [ext_resource path="res://animations/ExploderSpriteFrames.tres" type="SpriteFrames" id=4]
+[ext_resource path="res://ui/fonts/header_font.tres" type="DynamicFont" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
-[node name="Exploder" type="KinematicBody2D" groups=[
+[node name="ManicShroom" type="KinematicBody2D" groups=[
 "Characters",
 "LinkableCharacters",
 ]]
@@ -35,9 +36,10 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -20.0
-margin_top = -100.0
+margin_top = -90.0
 margin_right = 20.0
-margin_bottom = -86.0
+margin_bottom = -76.0
+custom_fonts/font = ExtResource( 5 )
 text = "10"
 align = 1
 valign = 1

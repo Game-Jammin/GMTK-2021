@@ -6,7 +6,7 @@ onready var animate_sprite = $AnimatedSprite
 
 export (bool) var is_escort = false
 
-export (int) var speed = 500
+export (int) var speed = 400
 export (int) var jump_speed = -600
 export (int) var gravity = 2500
 

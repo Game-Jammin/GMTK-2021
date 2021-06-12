@@ -33,6 +33,8 @@ func _process(delta):
 	$Radius.visible = Input.is_action_pressed("left_click")
 	update_link()
 	
+	animation_handler()
+	
 	if Input.is_action_just_pressed("left_click") or Input.is_action_just_pressed("right_click"):
 		linked_character = null
 		Global.change_linked(linked_character)
