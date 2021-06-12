@@ -25,17 +25,22 @@ func move():
 	
 	if linked_character:
 		move_linked()
+	
+	if direction != 0:
+		facing_right = direction > 0
 
 func move_linked():
 	linked_character.update_direction(direction)
 
-func _process(delta):
+func _process(_delta):
 	$Radius.visible = Input.is_action_pressed("left_click")
 	update_link()
 	
 	animation_handler()
 	
 	if Input.is_action_just_pressed("left_click") or Input.is_action_just_pressed("right_click"):
+		if linked_character:
+			linked_character.get_node("Unlink").play()
 		linked_character = null
 		Global.change_linked(linked_character)
 	if Input.is_action_just_released("left_click"):
@@ -44,6 +49,7 @@ func _process(delta):
 		for character in linkable_characters:
 			if character.mouse_over and global_position.distance_to(character.global_position) <= link_radius:
 				linked_character = character
+				linked_character.get_node("Link").play()
 		Global.change_linked(linked_character)
 
 func _physics_process(delta):
@@ -53,6 +59,7 @@ func _physics_process(delta):
 	# disconnect if characters move to far from each other
 	if linked_character:
 		if global_position.distance_to(linked_character.global_position) > link_radius:
+			linked_character.get_node("Unlink").play()
 			linked_character = null
 			Global.change_linked(linked_character)
 	

@@ -3,6 +3,8 @@ class_name LinkableCharacter
 
 var mouse_over = false
 
+export (bool) var satisfied = false
+
 func update_direction(new_direction):
 	direction = new_direction
 
@@ -11,6 +13,9 @@ func move():
 		velocity.x = lerp(velocity.x, direction * speed, acceleration)
 	else:
 		velocity.x = lerp(velocity.x, 0, friction)
+		
+	if direction != 0:
+		facing_right = direction > 0
 
 func _process(_delta):
 	animation_handler()

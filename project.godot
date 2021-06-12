@@ -35,12 +35,14 @@ config/icon="res://art/temp/icon.png"
 SceneManager="*res://singletons/SceneManager.gd"
 Transition="*res://singletons/Transition.tscn"
 Global="*res://singletons/Global.gd"
+MusicPlayer="*res://singletons/MusicPlayer.tscn"
 
 [display]
 
 window/size/width=1920
 window/size/height=1080
-window/size/fullscreen=true
+window/size/test_width=960
+window/size/test_height=540
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 

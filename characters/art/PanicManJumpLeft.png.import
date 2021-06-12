@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PanicManIdleRescale.png-af53c9b7dd0d5903f2bf9c0efbd7577f.stex"
+path="res://.import/PanicManJumpLeft.png-106612d351c7d82d22cbf77923e62851.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/PanicManIdleRescale.png"
-dest_files=[ "res://.import/PanicManIdleRescale.png-af53c9b7dd0d5903f2bf9c0efbd7577f.stex" ]
+source_file="res://characters/art/PanicManJumpLeft.png"
+dest_files=[ "res://.import/PanicManJumpLeft.png-106612d351c7d82d22cbf77923e62851.stex" ]
 
 [params]
 

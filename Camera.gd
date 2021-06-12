@@ -16,7 +16,7 @@ func _ready():
 	Global.connect('shake_camera', self, '_on_shake_camera')
 	global_position.y = vertical_offset
 
-func _process(delta):
+func _process(_delta):
 	characters = get_tree().get_nodes_in_group("Characters")
 	if (characters.size() > 0):
 		var total_postion = Vector2.ZERO
