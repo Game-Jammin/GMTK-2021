@@ -10,7 +10,7 @@ func _on_Quit_pressed():
 	get_tree().quit()
 
 func _input(event):
-	if event.is_action_released("pause"):
+	if event.is_action_pressed("pause"):
 		toogle_pause()
 
 func toogle_pause():

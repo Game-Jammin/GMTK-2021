@@ -31,6 +31,8 @@ func jump():
 	if can_jump:
 		can_jump = false
 		velocity.y = jump_speed
+		
+		$Jump.play()
 
 func coyoteTime():
 	yield(get_tree().create_timer(coyote_time), 'timeout')
@@ -55,7 +57,7 @@ func animation_handler():
 		if facing_right:
 			animate_sprite.animation = "JumpRight"
 		else:
-			animate_sprite.animation = "Jumpleft"
+			animate_sprite.animation = "JumpLeft"
 
 func _on_linked_changed(character):
 	if character == null:

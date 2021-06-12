@@ -31,6 +31,7 @@ position = Vector2( 0, -2 )
 scale = Vector2( 0.3, 0.3 )
 frames = ExtResource( 5 )
 animation = "IdleLeft"
+frame = 9
 playing = true
 
 [node name="Tween" type="Tween" parent="."]
@@ -70,3 +71,12 @@ one_shot = true
 
 [node name="FuseTimer" type="Timer" parent="."]
 one_shot = true
+
+[node name="Jump" type="AudioStreamPlayer2D" parent="."]
+bus = "SFX"
+
+[node name="Link" type="AudioStreamPlayer2D" parent="."]
+bus = "SFX"
+
+[node name="Unlink" type="AudioStreamPlayer2D" parent="."]
+bus = "SFX"
