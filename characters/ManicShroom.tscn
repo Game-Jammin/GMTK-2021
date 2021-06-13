@@ -8,21 +8,26 @@
 [ext_resource path="res://sounds/SFX/PanicMan PANIC [2021-06-12 130206].wav" type="AudioStream" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 14.5012, 22.1425 )
 
 [node name="ManicShroom" type="KinematicBody2D" groups=[
 "Characters",
 "LinkableCharacters",
 ]]
+z_index = 2
 input_pickable = true
 script = ExtResource( 2 )
 friction = 0.3
 can_die = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.3, 0.3 )
 frames = ExtResource( 4 )
 animation = "IdleLeft"
+playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 1.42696 )
 shape = SubResource( 1 )
 
 [node name="FuseTimer" type="Timer" parent="."]
@@ -57,5 +62,5 @@ bus = "SFX"
 [node name="Unlink" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 6 )
 bus = "SFX"
-[connection signal="mouse_entered" from="." to="." method="_on_Survivor_mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_Survivor_mouse_exited"]
+[connection signal="mouse_entered" from="." to="." method="_on_ManicShroom_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_ManicShroom_mouse_exited"]

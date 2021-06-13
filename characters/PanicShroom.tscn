@@ -15,6 +15,7 @@ extents = Vector2( 24.2474, 32 )
 "Characters",
 "LinkableCharacters",
 ]]
+z_index = 2
 input_pickable = true
 script = ExtResource( 2 )
 speed = 500
@@ -24,7 +25,8 @@ friction = 0.3
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.3, 0.3 )
 frames = ExtResource( 1 )
-animation = "JumpLeft"
+animation = "IdleLeft"
+frame = 12
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -70,5 +72,6 @@ bus = "SFX"
 [node name="Explode" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 7 )
 bus = "SFX"
-[connection signal="mouse_entered" from="." to="." method="_on_Exploder_mouse_entered"]
+[connection signal="mouse_entered" from="." to="." method="_on_PanicShroom_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_Exploder_mouse_exited"]
+[connection signal="mouse_exited" from="." to="." method="_on_PanicShroom_mouse_exited"]

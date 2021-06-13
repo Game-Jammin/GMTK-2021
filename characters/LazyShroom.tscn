@@ -16,6 +16,7 @@ extents = Vector2( 42.8184, 2.3934 )
 "Characters",
 ]]
 position = Vector2( 0.237823, 0 )
+z_index = 2
 script = ExtResource( 2 )
 is_escort = true
 speed = 250
@@ -32,7 +33,6 @@ position = Vector2( 0, -2 )
 scale = Vector2( 0.3, 0.3 )
 frames = ExtResource( 5 )
 animation = "IdleLeft"
-frame = 8
 playing = true
 
 [node name="Tween" type="Tween" parent="."]

@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/Manic Grunt.wav-11ae284a86b015a17280f542e23e9d77.sample"
+path="res://.import/Manic Grunt.wav-0d620e3081d203a5a154628036cb52ae.sample"
 
 [deps]
 
-source_file="res://SFX/Manic Grunt.wav"
-dest_files=[ "res://.import/Manic Grunt.wav-11ae284a86b015a17280f542e23e9d77.sample" ]
+source_file="res://sounds/SFX/Manic Grunt.wav"
+dest_files=[ "res://.import/Manic Grunt.wav-0d620e3081d203a5a154628036cb52ae.sample" ]
 
 [params]
 
