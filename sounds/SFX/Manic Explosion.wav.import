@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/Manic Explosion.wav-49dff1f9b29f9a30b7a558952d8d62cf.sample"
+path="res://.import/Manic Explosion.wav-b093cafa0609a1d4fba1b1b8f1780ce0.sample"
 
 [deps]
 
-source_file="res://sounds/SFX/Manic Explosion.wav"
-dest_files=[ "res://.import/Manic Explosion.wav-49dff1f9b29f9a30b7a558952d8d62cf.sample" ]
+source_file="res://SFX/Manic Explosion.wav"
+dest_files=[ "res://.import/Manic Explosion.wav-b093cafa0609a1d4fba1b1b8f1780ce0.sample" ]
 
 [params]
 

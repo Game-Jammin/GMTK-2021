@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/LazyManGrunt 2 [2021-06-12 182130].wav-be6627ad8bed2978017cb13ee9097541.sample"
+path="res://.import/LazyManGrunt 2 [2021-06-12 182130].wav-b2bd21cd2928b07d7fb2f148ea98ac87.sample"
 
 [deps]
 
-source_file="res://sounds/SFX/LazyManGrunt 2 [2021-06-12 182130].wav"
-dest_files=[ "res://.import/LazyManGrunt 2 [2021-06-12 182130].wav-be6627ad8bed2978017cb13ee9097541.sample" ]
+source_file="res://SFX/LazyManGrunt 2 [2021-06-12 182130].wav"
+dest_files=[ "res://.import/LazyManGrunt 2 [2021-06-12 182130].wav-b2bd21cd2928b07d7fb2f148ea98ac87.sample" ]
 
 [params]
 

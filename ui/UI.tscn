@@ -8,8 +8,7 @@
 
 [node name="Pause" parent="." instance=ExtResource( 2 )]
 
-[node name="LevelLose" parent="." instance=ExtResource( 1 )]
-visible = false
-
 [node name="LevelWin" parent="." instance=ExtResource( 3 )]
+
+[node name="LevelLose" parent="." instance=ExtResource( 1 )]
 visible = false
