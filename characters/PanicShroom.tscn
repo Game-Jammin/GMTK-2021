@@ -19,14 +19,14 @@ z_index = 2
 input_pickable = true
 script = ExtResource( 2 )
 speed = 500
-jump_speed = -850
+jump_speed = -900
 friction = 0.3
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.3, 0.3 )
 frames = ExtResource( 1 )
 animation = "IdleLeft"
-frame = 24
+frame = 12
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
