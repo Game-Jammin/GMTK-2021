@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/GMTK-song-1-loopable.ogg-5e9534fecd636cb56a5db77d9589b733.oggstr"
+
+[deps]
+
+source_file="res://Music/GMTK-song-1-loopable.ogg"
+dest_files=[ "res://.import/GMTK-song-1-loopable.ogg-5e9534fecd636cb56a5db77d9589b733.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
