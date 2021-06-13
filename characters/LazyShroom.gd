@@ -37,11 +37,7 @@ func move_linked():
 	linked_character.update_direction(direction)
 
 func _process(_delta):
-	if Input.is_action_pressed("left_click"):
-		$Radius.show()
-	else:
-		$Radius.hide()
-	
+	$Radius.visible = Input.is_action_pressed("left_click")
 	update_link()
 	
 	animation_handler()
@@ -103,8 +99,8 @@ func update_link():
 	if (linked_character):
 		$Line2D.points[1] = line_target
 	else:
-		$Line2D/Tween.interpolate_method(self, "update_line_point", $Line2D.points[1], line_target, 0.2)
-		$Line2D/Tween.start()
+		$Tween.interpolate_method(self, "update_line_point", $Line2D.points[1], line_target, 0.05)
+		$Tween.start()
 
 func update_line_point(new_pos):
 	$Line2D.set_point_position(1, new_pos)
