@@ -7,39 +7,38 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="1000"
-   height="1000"
-   viewBox="0 0 264.58332 264.58334"
-   version="1.1"
-   id="svg8"
+   sodipodi:docname="link_radius.svg"
    inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
-   sodipodi:docname="link_radius.svg">
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 265.59631 264.00571"
+   height="264.00571mm"
+   width="265.59631mm">
   <defs
      id="defs2" />
   <sodipodi:namedview
-     units="px"
-     id="base"
-     pagecolor="#000000"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="264.53254"
-     inkscape:cy="486.62083"
-     inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
-     inkscape:document-rotation="0"
-     showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1027"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
-     fit-margin-top="0"
-     fit-margin-left="0"
+     fit-margin-bottom="0"
      fit-margin-right="0"
-     fit-margin-bottom="0" />
+     fit-margin-left="0"
+     fit-margin-top="0"
+     inkscape:window-maximized="1"
+     inkscape:window-y="-8"
+     inkscape:window-x="-8"
+     inkscape:window-height="1027"
+     inkscape:window-width="1920"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="590.44198"
+     inkscape:cx="67.82103"
+     inkscape:zoom="0.5"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#000000"
+     id="base" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -53,21 +52,21 @@
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
+     transform="translate(0.39798945,0.40247013)"
      id="layer1"
-     transform="translate(0.39798945,0.40247013)">
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
     <g
-       id="g836"
-       transform="matrix(-9.8864287,0,0,9.8849371,262.677,1.0993042)"
-       style="fill:none;stroke:#e0e0e0;stroke-width:0.303469;stroke-miterlimit:4;stroke-dasharray:1.82082, 1.82082;stroke-dashoffset:0;stroke-opacity:1">
+       style="fill:none;stroke:#e0e0e0;stroke-width:0.106171;stroke-miterlimit:4;stroke-dasharray:0.424685, 0.42468499999999998;stroke-dashoffset:0;stroke-opacity:1"
+       transform="matrix(-9.9984206,0,0,9.9380072,264.66754,0.12857578)"
+       id="g836">
       <circle
-         transform="scale(-1,1)"
-         r="13.229167"
-         cy="13.229167"
-         cx="-13.229167"
+         style="fill:none;stroke:#e0e0e0;stroke-width:0.106171;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:0.424685, 0.42468499999999998;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
          id="path833"
-         style="fill:none;stroke:#e0e0e0;stroke-width:0.303469;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1.82082, 1.82082;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke" />
+         cx="-13.229167"
+         cy="13.229167"
+         r="13.229167"
+         transform="scale(-1,1)" />
     </g>
   </g>
 </svg>

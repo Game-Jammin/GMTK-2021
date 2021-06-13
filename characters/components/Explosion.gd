@@ -19,4 +19,5 @@ func _process(_delta):
 		character.queue_free()
 
 func _on_AnimationPlayer_animation_finished(_anim_name):
+	print ("Finsihed")
 	queue_free()
