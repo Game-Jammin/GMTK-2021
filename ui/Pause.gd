@@ -5,6 +5,7 @@ func _on_Resume_pressed():
 
 func _on_Menu_pressed():
 	SceneManager.goto_scene('res://ui/Main Menu.tscn')
+	get_tree().paused = false
 
 func _on_Quit_pressed():
 	get_tree().quit()

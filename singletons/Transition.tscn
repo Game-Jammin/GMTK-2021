@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=1]
 resource_name = "Show"
 length = 0.2
 tracks/0/type = "value"
@@ -17,6 +17,7 @@ tracks/0/keys = {
 }
 
 [node name="Transition" type="CanvasLayer"]
+pause_mode = 2
 layer = 5
 
 [node name="Transition" type="ColorRect" parent="."]
@@ -31,4 +32,4 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 method_call_mode = 1
-anims/Show = SubResource( 2 )
+anims/Show = SubResource( 1 )
