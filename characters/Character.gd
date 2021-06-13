@@ -75,13 +75,13 @@ func _on_linked_changed(character):
 			$FuseTimer.stop()
 
 func explode():
-	#var new_explosion = load(explosion).instance()
-	#add_child(new_explosion)
-	$Explosion.get_node("AnimationPlayer").play("Manic Explode")
+	var new_explosion = load(explosion).instance()
+	new_explosion.global_position = global_position
+	new_explosion.character = self
+	get_parent().add_child(new_explosion)
 	speed = 0
 	
 func _on_FuseTimer_timeout():
 	explode()
 	if not can_die:
 		get_parent().lose()
-	
