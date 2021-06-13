@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://levels/Tilemap.tres" type="TileSet" id=1]
+[ext_resource path="res://levels/ParallaxBackground.tscn" type="PackedScene" id=2]
 [ext_resource path="res://characters/PanicShroom.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Camera.tscn" type="PackedScene" id=4]
 [ext_resource path="res://characters/LazyShroom.tscn" type="PackedScene" id=5]
@@ -10,6 +11,8 @@
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 9 )
+
+[node name="Camera" parent="." instance=ExtResource( 4 )]
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2( 0.4, 0.4 )
@@ -31,4 +34,4 @@ position = Vector2( 406.317, 209.519 )
 [node name="PanicShroom" parent="." instance=ExtResource( 3 )]
 position = Vector2( 208.776, 206.818 )
 
-[node name="Camera" parent="." instance=ExtResource( 4 )]
+[node name="ParallaxBackground" parent="." instance=ExtResource( 2 )]

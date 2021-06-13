@@ -15,7 +15,7 @@ func _ready():
 func _process(_delta):
 	if shake:
 		shake = false
-		Global.shake_screen(0.2, 15, 16, 0)
+		Global.shake_screen(0.1, 60, 40, 0)
 		character.queue_free()
 
 func _on_AnimationPlayer_animation_finished(_anim_name):
