@@ -1,12 +1,14 @@
 extends Node2D
 
-var linkable_characters 
+export (int) var level_number = 1
+var linkable_characters
 
 func _process(delta):
-	linkable_characters = get_tree().get_nodes_in_group("LinkableCharacters")
-	if linkable_characters.size() > 0:
-		if check_win():
-			win()
+	if not ($UI/LevelWin.visible or $UI/LevelLose.visible):
+		linkable_characters = get_tree().get_nodes_in_group("LinkableCharacters")
+		if linkable_characters.size() > 0:
+			if check_win():
+				win()
 
 func check_win():
 	for character in linkable_characters:
@@ -15,7 +17,7 @@ func check_win():
 	return true
 
 func win():
-	print ("You Win!")
+	$UI/LevelWin.visible = true
 	
 func lose():
-	print ("You Lose!")
+	$UI/LevelLose.visible = true
