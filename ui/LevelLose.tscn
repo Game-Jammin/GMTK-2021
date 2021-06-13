@@ -59,5 +59,6 @@ text = "Restart"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+bus = "SFX"
 [connection signal="pressed" from="HBoxContainer/Menu" to="." method="_on_Menu_pressed"]
 [connection signal="pressed" from="HBoxContainer/Restart" to="." method="_on_Restart_pressed"]

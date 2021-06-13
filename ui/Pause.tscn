@@ -46,17 +46,27 @@ __meta__ = {
 
 [node name="Resume" type="Button" parent="VBoxContainer"]
 margin_right = 284.0
-margin_bottom = 72.0
+margin_bottom = 49.0
 grow_horizontal = 0
 grow_vertical = 0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 2 )
 text = "Resume"
 
-[node name="Menu" type="Button" parent="VBoxContainer"]
-margin_top = 92.0
+[node name="Restart" type="Button" parent="VBoxContainer"]
+margin_top = 69.0
 margin_right = 284.0
-margin_bottom = 164.0
+margin_bottom = 118.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 2 )
+text = "Restart"
+
+[node name="Menu" type="Button" parent="VBoxContainer"]
+margin_top = 138.0
+margin_right = 284.0
+margin_bottom = 187.0
 grow_horizontal = 0
 grow_vertical = 0
 size_flags_vertical = 3
@@ -64,7 +74,7 @@ custom_fonts/font = ExtResource( 2 )
 text = "Main Menu"
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
-margin_top = 184.0
+margin_top = 207.0
 margin_right = 284.0
 margin_bottom = 258.0
 grow_horizontal = 0
@@ -73,5 +83,6 @@ size_flags_vertical = 3
 custom_fonts/font = ExtResource( 2 )
 text = "Exit to Desktop"
 [connection signal="pressed" from="VBoxContainer/Resume" to="." method="_on_Resume_pressed"]
+[connection signal="pressed" from="VBoxContainer/Restart" to="." method="_on_Restart_pressed"]
 [connection signal="pressed" from="VBoxContainer/Menu" to="." method="_on_Menu_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_Quit_pressed"]

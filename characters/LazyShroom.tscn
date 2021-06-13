@@ -10,7 +10,7 @@
 [ext_resource path="res://sounds/SFX/LazyManGrunt 1 [2021-06-12 182126].wav" type="AudioStream" id=8]
 [ext_resource path="res://characters/components/Radius.gd" type="Script" id=9]
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=1]
 resource_name = "Radius Rotate"
 length = 20.0
 tracks/0/type = "value"
@@ -26,10 +26,10 @@ tracks/0/keys = {
 "values": [ 0.0, 360.0 ]
 }
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 20.4979, 33.2497 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 42.8184, 2.3934 )
 
 [node name="LazyShroom" type="KinematicBody2D" groups=[
@@ -62,23 +62,22 @@ script = ExtResource( 9 )
 [node name="Tween" type="Tween" parent="Radius"]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Radius"]
-"anims/Radius Rotate" = SubResource( 3 )
+"anims/Radius Rotate" = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -2.32353 )
 scale = Vector2( 0.3, 0.3 )
 frames = ExtResource( 5 )
 animation = "IdleLeft"
-frame = 9
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 3.652, 5.14 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2( -11.0926, -28.0021 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 one_way_collision = true
 
 [node name="CountdownLabel" type="Label" parent="."]

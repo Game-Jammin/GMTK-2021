@@ -17,7 +17,7 @@ func check_win():
 	return true
 
 func win():
-	$UI/LevelWin.visible = true
+	$UI/LevelWin.show()
 	
 func lose():
-	$UI/LevelLose.visible = true
+	$UI/LevelLose.show()

@@ -17,3 +17,6 @@ func _input(event):
 func toogle_pause():
 	get_tree().paused = not get_tree().paused
 	visible = get_tree().paused
+
+func _on_Restart_pressed():
+	SceneManager.reload_scene()
