@@ -17,6 +17,7 @@ tracks/0/keys = {
 }
 
 [node name="Transition" type="CanvasLayer"]
+layer = 5
 
 [node name="Transition" type="ColorRect" parent="."]
 pause_mode = 2

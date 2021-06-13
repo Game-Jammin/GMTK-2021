@@ -4,10 +4,11 @@ export (int) var level_number = 1
 var linkable_characters
 
 func _process(delta):
-	linkable_characters = get_tree().get_nodes_in_group("LinkableCharacters")
-	if linkable_characters.size() > 0:
-		if check_win():
-			win()
+	if not ($UI/LevelWin.visible or $UI/LevelLose.visible):
+		linkable_characters = get_tree().get_nodes_in_group("LinkableCharacters")
+		if linkable_characters.size() > 0:
+			if check_win():
+				win()
 
 func check_win():
 	for character in linkable_characters:
@@ -17,8 +18,6 @@ func check_win():
 
 func win():
 	$UI/LevelWin.visible = true
-	print ("You Win!")
 	
 func lose():
 	$UI/LevelLose.visible = true
-	print ("You Lose!")
