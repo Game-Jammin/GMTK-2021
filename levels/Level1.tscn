@@ -12,12 +12,13 @@
 script = ExtResource( 9 )
 
 [node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 0.4, 0.4 )
 tile_set = ExtResource( 1 )
-cell_size = Vector2( 400, 400 )
-cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_size = Vector2( 200, 200 )
+cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
 cell_tile_origin = 1
 format = 1
-tile_data = PoolIntArray( 65539, 4, 0, 65540, 4, 0, 131077, 4, 0, 131078, 4, 0, 327709, 5, 0, 327710, 5, 0, 327711, 5, 0, 327712, 5, 0, 327713, 5, 0 )
+tile_data = PoolIntArray( 196609, 0, 196608, 196610, 0, 196609, 196611, 0, 196609, 196612, 0, 196609, 196613, 0, 196609, 196614, 0, 196609, 196615, 0, 196609, 196616, 0, 196609, 196617, 0, 196609, 196618, 0, 196609, 196619, 0, 196609, 196620, 0, 196610, 327709, 5, 0, 327710, 5, 0, 327711, 5, 0, 327712, 5, 0, 327713, 5, 0 )
 
 [node name="UI" parent="." instance=ExtResource( 6 )]
 

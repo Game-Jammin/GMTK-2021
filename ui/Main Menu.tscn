@@ -69,7 +69,7 @@ anchor_top = 1.0
 anchor_bottom = 1.0
 margin_top = -14.0
 margin_right = 40.0
-text = "The game was made in 48 hours for the GMTK 2021 gamejam"
+text = "This game was made in 48 hours for the GMTK 2021 gamejam."
 __meta__ = {
 "_edit_use_anchors_": false
 }
