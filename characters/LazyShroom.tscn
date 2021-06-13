@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://sounds/SFX/LazyMan Jump1 [2021-06-12 182135].wav" type="AudioStream" id=1]
 [ext_resource path="res://characters/LazyShroom.gd" type="Script" id=2]
@@ -8,6 +8,24 @@
 [ext_resource path="res://ui/fonts/header_font.tres" type="DynamicFont" id=6]
 [ext_resource path="res://sounds/SFX/LazyManGrunt 2 [2021-06-12 182130].wav" type="AudioStream" id=7]
 [ext_resource path="res://sounds/SFX/LazyManGrunt 1 [2021-06-12 182126].wav" type="AudioStream" id=8]
+[ext_resource path="res://characters/components/Radius.gd" type="Script" id=9]
+
+[sub_resource type="Animation" id=3]
+resource_name = "Radius Rotate"
+length = 20.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 20 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 360.0 ]
+}
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20.4979, 33.2497 )
@@ -24,20 +42,36 @@ script = ExtResource( 2 )
 is_escort = true
 speed = 250
 friction = 0.3
+link_radius = 300.0
 
 [node name="Line2D" type="Line2D" parent="."]
 z_index = -1
 points = PoolVector2Array( 0, 0, 0, 0 )
-width = 2.0
-default_color = Color( 1, 1, 1, 1 )
+width = 6.0
+default_color = Color( 0.737255, 0.94902, 0.870588, 1 )
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Tween" type="Tween" parent="Line2D"]
+
+[node name="Radius" type="Sprite" parent="."]
+modulate = Color( 0.576471, 1, 0.52549, 1 )
+rotation = 0.328752
+texture = ExtResource( 3 )
+script = ExtResource( 9 )
+
+[node name="Tween" type="Tween" parent="Radius"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Radius"]
+"anims/Radius Rotate" = SubResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -2.32353 )
 scale = Vector2( 0.3, 0.3 )
 frames = ExtResource( 5 )
 animation = "IdleLeft"
-
-[node name="Tween" type="Tween" parent="."]
+frame = 14
+playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 3.652, 5.14 )
@@ -47,9 +81,6 @@ shape = SubResource( 1 )
 position = Vector2( -11.0926, -28.0021 )
 shape = SubResource( 2 )
 one_way_collision = true
-
-[node name="Radius" type="Sprite" parent="."]
-texture = ExtResource( 3 )
 
 [node name="CountdownLabel" type="Label" parent="."]
 visible = false
