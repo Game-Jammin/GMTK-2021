@@ -5,6 +5,9 @@ var mouse_over = false
 
 export (bool) var satisfied = false
 
+var is_linked = false
+var lazy = false
+
 func update_direction(new_direction):
 	direction = new_direction
 
@@ -19,13 +22,19 @@ func move():
 
 func _process(_delta):
 	animation_handler()
-
+	
 func _physics_process(delta):
 	if is_on_floor():
 		can_jump = true
-		
+	animation_handler()
 	move()
-	direction = 0
 	# Apply gravity to character
 	velocity.y += gravity * delta
 	velocity = move_and_slide(velocity, Vector2.UP)
+
+func link():
+	$Link.play()
+	
+func unlink():
+	direction = 0
+	$Unlink.play()

@@ -1,10 +1,14 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
+[ext_resource path="res://sounds/SFX/LazyMan Jump1 [2021-06-12 182135].wav" type="AudioStream" id=1]
 [ext_resource path="res://characters/LazyShroom.gd" type="Script" id=2]
 [ext_resource path="res://art/ui/link_radius.svg" type="Texture" id=3]
 [ext_resource path="res://characters/components/CountdownLabel.gd" type="Script" id=4]
 [ext_resource path="res://animations/LazyShroomSpriteFrames.tres" type="SpriteFrames" id=5]
 [ext_resource path="res://ui/fonts/header_font.tres" type="DynamicFont" id=6]
+[ext_resource path="res://sounds/SFX/LazyManGrunt 2 [2021-06-12 182130].wav" type="AudioStream" id=7]
+[ext_resource path="res://sounds/SFX/LazyManGrunt 1 [2021-06-12 182126].wav" type="AudioStream" id=8]
+[ext_resource path="res://characters/components/Explosion.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20.4979, 33.2497 )
@@ -16,6 +20,7 @@ extents = Vector2( 42.8184, 2.3934 )
 "Characters",
 ]]
 position = Vector2( 0.237823, 0 )
+z_index = 2
 script = ExtResource( 2 )
 is_escort = true
 speed = 250
@@ -28,22 +33,21 @@ width = 2.0
 default_color = Color( 1, 1, 1, 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 0, -2 )
+position = Vector2( 0, -2.32353 )
 scale = Vector2( 0.3, 0.3 )
 frames = ExtResource( 5 )
 animation = "IdleLeft"
-frame = 8
-playing = true
 
 [node name="Tween" type="Tween" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 3.65244, 5.14048 )
+position = Vector2( 3.652, 5.14 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2( -11.0926, -28.0021 )
 shape = SubResource( 2 )
+one_way_collision = true
 
 [node name="Radius" type="Sprite" parent="."]
 texture = ExtResource( 3 )
@@ -74,10 +78,15 @@ one_shot = true
 one_shot = true
 
 [node name="Jump" type="AudioStreamPlayer2D" parent="."]
-bus = "SFX"
+stream = ExtResource( 1 )
+bus = "Lazy"
 
 [node name="Link" type="AudioStreamPlayer2D" parent="."]
-bus = "SFX"
+stream = ExtResource( 7 )
+bus = "Lazy"
 
 [node name="Unlink" type="AudioStreamPlayer2D" parent="."]
-bus = "SFX"
+stream = ExtResource( 8 )
+bus = "Lazy"
+
+[node name="Explosion" parent="." instance=ExtResource( 9 )]
