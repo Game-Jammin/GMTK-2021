@@ -1,28 +1,35 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://sounds/SFX/PanicManGrunt [2021-06-12 125651].wav" type="AudioStream" id=1]
+[ext_resource path="res://sounds/SFX/Manic Jump 1.wav" type="AudioStream" id=1]
 [ext_resource path="res://characters/ManicShroom.gd" type="Script" id=2]
 [ext_resource path="res://characters/components/CountdownLabel.gd" type="Script" id=3]
 [ext_resource path="res://animations/ExploderSpriteFrames.tres" type="SpriteFrames" id=4]
 [ext_resource path="res://ui/fonts/header_font.tres" type="DynamicFont" id=5]
-[ext_resource path="res://sounds/SFX/PanicMan PANIC [2021-06-12 130206].wav" type="AudioStream" id=6]
+[ext_resource path="res://sounds/SFX/Manic Grunt 2.wav" type="AudioStream" id=6]
+[ext_resource path="res://sounds/SFX/Manic Grunt 3.wav" type="AudioStream" id=7]
+[ext_resource path="res://characters/components/Explosion.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 18, 20.579 )
 
 [node name="ManicShroom" type="KinematicBody2D" groups=[
 "Characters",
 "LinkableCharacters",
 ]]
+z_index = 2
 input_pickable = true
 script = ExtResource( 2 )
 friction = 0.3
 can_die = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.3, 0.3 )
 frames = ExtResource( 4 )
 animation = "IdleLeft"
+playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 2.42696 )
 shape = SubResource( 1 )
 
 [node name="FuseTimer" type="Timer" parent="."]
@@ -48,14 +55,17 @@ __meta__ = {
 }
 
 [node name="Jump" type="AudioStreamPlayer2D" parent="."]
-bus = "SFX"
+stream = ExtResource( 1 )
+bus = "Manic"
 
 [node name="Link" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 1 )
-bus = "SFX"
+stream = ExtResource( 7 )
+bus = "Manic"
 
 [node name="Unlink" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 6 )
-bus = "SFX"
-[connection signal="mouse_entered" from="." to="." method="_on_Survivor_mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_Survivor_mouse_exited"]
+bus = "Manic"
+
+[node name="Explosion" parent="." instance=ExtResource( 8 )]
+[connection signal="mouse_entered" from="." to="." method="_on_ManicShroom_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_ManicShroom_mouse_exited"]

@@ -27,7 +27,11 @@ func move():
 		move_linked()
 	
 	if direction != 0:
+		var temp_facing_right = facing_right
 		facing_right = direction > 0
+		if temp_facing_right != facing_right:
+			$CollisionShape2D.position.x = -$CollisionShape2D.position.x
+			$CollisionShape2D2.position.x = -$CollisionShape2D2.position.x
 
 func move_linked():
 	linked_character.update_direction(direction)
@@ -40,7 +44,8 @@ func _process(_delta):
 	
 	if Input.is_action_just_pressed("left_click") or Input.is_action_just_pressed("right_click"):
 		if linked_character:
-			linked_character.get_node("Unlink").play()
+			$Link.play()
+			linked_character.unlink()
 		linked_character = null
 		Global.change_linked(linked_character)
 	if Input.is_action_just_released("left_click"):
@@ -49,7 +54,8 @@ func _process(_delta):
 		for character in linkable_characters:
 			if character.mouse_over and global_position.distance_to(character.global_position) <= link_radius:
 				linked_character = character
-				linked_character.get_node("Link").play()
+				$Unlink.play()
+				linked_character.link()
 		Global.change_linked(linked_character)
 
 func _physics_process(delta):
@@ -59,7 +65,8 @@ func _physics_process(delta):
 	# disconnect if characters move to far from each other
 	if linked_character:
 		if global_position.distance_to(linked_character.global_position) > link_radius:
-			linked_character.get_node("Unlink").play()
+			linked_character.unlink()
+			$Unlink.play()
 			linked_character = null
 			Global.change_linked(linked_character)
 	
