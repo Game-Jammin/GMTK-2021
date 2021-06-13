@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://sounds/SFX/Manic Jump 1.wav" type="AudioStream" id=1]
 [ext_resource path="res://characters/ManicShroom.gd" type="Script" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://ui/fonts/header_font.tres" type="DynamicFont" id=5]
 [ext_resource path="res://sounds/SFX/Manic Grunt 2.wav" type="AudioStream" id=6]
 [ext_resource path="res://sounds/SFX/Manic Grunt 3.wav" type="AudioStream" id=7]
+[ext_resource path="res://characters/AnimatedSprite.gd" type="Script" id=8]
+[ext_resource path="res://sounds/SFX/Light step 1 (Freeze) [2021-06-12 213916].wav" type="AudioStream" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 18, 20 )
@@ -25,7 +27,14 @@ can_die = true
 scale = Vector2( 0.3, 0.3 )
 frames = ExtResource( 4 )
 animation = "IdleLeft"
+frame = 2
 playing = true
+script = ExtResource( 8 )
+footstep_frames = [ 4, 10 ]
+
+[node name="Footsteps" type="AudioStreamPlayer2D" parent="AnimatedSprite"]
+stream = ExtResource( 9 )
+bus = "SFX"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 1.42696 )
@@ -55,11 +64,14 @@ __meta__ = {
 
 [node name="Jump" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 1 )
+bus = "Manic"
 
 [node name="Link" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 7 )
+bus = "Manic"
 
 [node name="Unlink" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 6 )
+bus = "Manic"
 [connection signal="mouse_entered" from="." to="." method="_on_ManicShroom_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_ManicShroom_mouse_exited"]

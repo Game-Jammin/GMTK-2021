@@ -2,6 +2,7 @@ extends Panel
 
 func _on_Menu_pressed():
 	SceneManager.goto_scene('res://ui/Main Menu.tscn')
+	$AudioStreamPlayer.play()
 
 func _on_Next_pressed():
 	var current_level_number = get_parent().get_parent().level_number
