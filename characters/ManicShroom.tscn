@@ -10,7 +10,7 @@
 [ext_resource path="res://characters/components/Explosion.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 18, 20 )
+extents = Vector2( 18, 20.579 )
 
 [node name="ManicShroom" type="KinematicBody2D" groups=[
 "Characters",
@@ -26,11 +26,10 @@ can_die = true
 scale = Vector2( 0.3, 0.3 )
 frames = ExtResource( 4 )
 animation = "IdleLeft"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 1.42696 )
+position = Vector2( 0, 2.42696 )
 shape = SubResource( 1 )
 
 [node name="FuseTimer" type="Timer" parent="."]
@@ -68,6 +67,5 @@ stream = ExtResource( 6 )
 bus = "Manic"
 
 [node name="Explosion" parent="." instance=ExtResource( 8 )]
-shake = false
 [connection signal="mouse_entered" from="." to="." method="_on_ManicShroom_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_ManicShroom_mouse_exited"]

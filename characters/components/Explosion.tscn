@@ -364,6 +364,7 @@ tracks/6/keys = {
 [node name="Explosion" type="Node2D"]
 z_index = 4
 script = ExtResource( 1 )
+shake = true
 
 [node name="Sharapnal" type="Particles2D" parent="."]
 emitting = false

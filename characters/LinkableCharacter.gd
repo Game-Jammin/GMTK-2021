@@ -5,6 +5,9 @@ var mouse_over = false
 
 export (bool) var satisfied = false
 
+var is_linked = false
+var lazy = false
+
 func update_direction(new_direction):
 	direction = new_direction
 

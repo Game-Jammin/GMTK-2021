@@ -10,7 +10,7 @@
 [ext_resource path="res://characters/components/Explosion.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 24.247, 28 )
+extents = Vector2( 24.247, 29.1139 )
 
 [node name="PanicShroom" type="KinematicBody2D" groups=[
 "Characters",
@@ -20,7 +20,7 @@ z_index = 2
 input_pickable = true
 script = ExtResource( 2 )
 speed = 500
-jump_speed = -900
+jump_speed = -850
 friction = 0.3
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -31,7 +31,7 @@ frame = 12
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 7.61, 13 )
+position = Vector2( 7.61, 14 )
 shape = SubResource( 1 )
 
 [node name="FuseTimer" type="Timer" parent="."]
@@ -55,8 +55,6 @@ script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="LinkPoint" type="Position2D" parent="."]
 
 [node name="Jump" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 5 )
