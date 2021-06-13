@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/GMTK song 4 intro.ogg-662ad7f8db99f1dcf93c61312847736c.oggstr"
+
+[deps]
+
+source_file="res://sounds/music/GMTK song 4 intro.ogg"
+dest_files=[ "res://.import/GMTK song 4 intro.ogg-662ad7f8db99f1dcf93c61312847736c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

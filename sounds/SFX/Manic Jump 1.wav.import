@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/Manic Jump 1.wav-c89db5d0ad7e4c682eb05b4e36ae399b.sample"
+path="res://.import/Manic Jump 1.wav-81992a2b81c7070ec1f36ea91f3ac1ae.sample"
 
 [deps]
 
-source_file="res://SFX/Manic Jump 1.wav"
-dest_files=[ "res://.import/Manic Jump 1.wav-c89db5d0ad7e4c682eb05b4e36ae399b.sample" ]
+source_file="res://sounds/SFX/Manic Jump 1.wav"
+dest_files=[ "res://.import/Manic Jump 1.wav-81992a2b81c7070ec1f36ea91f3ac1ae.sample" ]
 
 [params]
 

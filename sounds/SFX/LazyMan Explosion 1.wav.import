@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/LazyMan Explosion 1.wav-a1fd94f91cf04b9144614ebd5de932f8.sample"
+path="res://.import/LazyMan Explosion 1.wav-52f147440acabd168423ee5534765255.sample"
 
 [deps]
 
-source_file="res://SFX/LazyMan Explosion 1.wav"
-dest_files=[ "res://.import/LazyMan Explosion 1.wav-a1fd94f91cf04b9144614ebd5de932f8.sample" ]
+source_file="res://sounds/SFX/LazyMan Explosion 1.wav"
+dest_files=[ "res://.import/LazyMan Explosion 1.wav-52f147440acabd168423ee5534765255.sample" ]
 
 [params]
 
