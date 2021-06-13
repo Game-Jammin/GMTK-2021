@@ -27,7 +27,11 @@ func move():
 		move_linked()
 	
 	if direction != 0:
+		var temp_facing_right = facing_right
 		facing_right = direction > 0
+		if temp_facing_right != facing_right:
+			$CollisionShape2D.position.x = -$CollisionShape2D.position.x
+			$CollisionShape2D2.position.x = -$CollisionShape2D2.position.x
 
 func move_linked():
 	linked_character.update_direction(direction)
