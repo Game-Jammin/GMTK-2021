@@ -26,7 +26,7 @@ friction = 0.3
 scale = Vector2( 0.3, 0.3 )
 frames = ExtResource( 1 )
 animation = "IdleLeft"
-frame = 17
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
