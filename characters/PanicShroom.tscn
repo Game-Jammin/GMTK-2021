@@ -26,7 +26,7 @@ friction = 0.3
 scale = Vector2( 0.3, 0.3 )
 frames = ExtResource( 1 )
 animation = "IdleLeft"
-frame = 12
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -59,19 +59,19 @@ __meta__ = {
 
 [node name="Jump" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 5 )
-bus = "SFX"
+bus = "Panic"
 
 [node name="Link" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 6 )
-bus = "SFX"
+bus = "Panic"
 
 [node name="Unlink" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 7 )
-bus = "SFX"
+bus = "Panic"
 
 [node name="Explode" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 7 )
-bus = "SFX"
+bus = "Panic"
 [connection signal="mouse_entered" from="." to="." method="_on_PanicShroom_mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_Exploder_mouse_exited"]
 [connection signal="mouse_exited" from="." to="." method="_on_PanicShroom_mouse_exited"]
+[connection signal="mouse_exited" from="." to="." method="_on_Exploder_mouse_exited"]

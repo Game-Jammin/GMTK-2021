@@ -1,10 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
+[ext_resource path="res://sounds/SFX/LazyMan Jump1 [2021-06-12 182135].wav" type="AudioStream" id=1]
 [ext_resource path="res://characters/LazyShroom.gd" type="Script" id=2]
 [ext_resource path="res://art/ui/link_radius.svg" type="Texture" id=3]
 [ext_resource path="res://characters/components/CountdownLabel.gd" type="Script" id=4]
 [ext_resource path="res://animations/LazyShroomSpriteFrames.tres" type="SpriteFrames" id=5]
 [ext_resource path="res://ui/fonts/header_font.tres" type="DynamicFont" id=6]
+[ext_resource path="res://sounds/SFX/LazyManGrunt 2 [2021-06-12 182130].wav" type="AudioStream" id=7]
+[ext_resource path="res://sounds/SFX/LazyManGrunt 1 [2021-06-12 182126].wav" type="AudioStream" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20.4979, 33.2497 )
@@ -33,6 +36,7 @@ position = Vector2( 0, -2 )
 scale = Vector2( 0.3, 0.3 )
 frames = ExtResource( 5 )
 animation = "IdleLeft"
+frame = 16
 playing = true
 
 [node name="Tween" type="Tween" parent="."]
@@ -74,10 +78,13 @@ one_shot = true
 one_shot = true
 
 [node name="Jump" type="AudioStreamPlayer2D" parent="."]
-bus = "SFX"
+stream = ExtResource( 1 )
+bus = "Lazy"
 
 [node name="Link" type="AudioStreamPlayer2D" parent="."]
-bus = "SFX"
+stream = ExtResource( 7 )
+bus = "Lazy"
 
 [node name="Unlink" type="AudioStreamPlayer2D" parent="."]
-bus = "SFX"
+stream = ExtResource( 8 )
+bus = "Lazy"

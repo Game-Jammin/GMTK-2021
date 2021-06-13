@@ -40,6 +40,7 @@ func _process(_delta):
 	
 	if Input.is_action_just_pressed("left_click") or Input.is_action_just_pressed("right_click"):
 		if linked_character:
+			$Link.play()
 			linked_character.unlink()
 		linked_character = null
 		Global.change_linked(linked_character)
@@ -49,6 +50,7 @@ func _process(_delta):
 		for character in linkable_characters:
 			if character.mouse_over and global_position.distance_to(character.global_position) <= link_radius:
 				linked_character = character
+				$Unlink.play()
 				linked_character.link()
 		Global.change_linked(linked_character)
 
@@ -60,6 +62,7 @@ func _physics_process(delta):
 	if linked_character:
 		if global_position.distance_to(linked_character.global_position) > link_radius:
 			linked_character.unlink()
+			$Unlink.play()
 			linked_character = null
 			Global.change_linked(linked_character)
 	
