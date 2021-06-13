@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://sounds/SFX/LazyMan Jump1 [2021-06-12 182135].wav" type="AudioStream" id=1]
 [ext_resource path="res://characters/LazyShroom.gd" type="Script" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://sounds/SFX/LazyManGrunt 2 [2021-06-12 182130].wav" type="AudioStream" id=7]
 [ext_resource path="res://sounds/SFX/LazyManGrunt 1 [2021-06-12 182126].wav" type="AudioStream" id=8]
 [ext_resource path="res://characters/components/Radius.gd" type="Script" id=9]
+[ext_resource path="res://characters/AnimatedSprite.gd" type="Script" id=10]
+[ext_resource path="res://sounds/SFX/Light step 2 (Freeze) [2021-06-12 213702].wav" type="AudioStream" id=11]
 
 [sub_resource type="Animation" id=3]
 resource_name = "Radius Rotate"
@@ -42,7 +44,7 @@ script = ExtResource( 2 )
 is_escort = true
 speed = 250
 friction = 0.3
-link_radius = 300.0
+link_radius = 500.0
 
 [node name="Line2D" type="Line2D" parent="."]
 z_index = -1
@@ -66,12 +68,18 @@ script = ExtResource( 9 )
 "anims/Radius Rotate" = SubResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 0, -2.32353 )
+position = Vector2( 0, -0.32353 )
 scale = Vector2( 0.3, 0.3 )
 frames = ExtResource( 5 )
-animation = "IdleLeft"
-frame = 14
+animation = "RunLeft"
+frame = 16
 playing = true
+script = ExtResource( 10 )
+footstep_frames = [ 0, 10 ]
+
+[node name="Footsteps" type="AudioStreamPlayer2D" parent="AnimatedSprite"]
+stream = ExtResource( 11 )
+bus = "SFX"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 3.652, 5.14 )
@@ -109,9 +117,12 @@ one_shot = true
 
 [node name="Jump" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 1 )
+bus = "Lazy"
 
 [node name="Link" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 7 )
+bus = "Lazy"
 
 [node name="Unlink" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 8 )
+bus = "Lazy"
