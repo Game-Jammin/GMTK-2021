@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://sounds/SFX/LazyMan Jump1 [2021-06-12 182135].wav" type="AudioStream" id=1]
 [ext_resource path="res://characters/LazyShroom.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://ui/fonts/header_font.tres" type="DynamicFont" id=6]
 [ext_resource path="res://sounds/SFX/LazyManGrunt 2 [2021-06-12 182130].wav" type="AudioStream" id=7]
 [ext_resource path="res://sounds/SFX/LazyManGrunt 1 [2021-06-12 182126].wav" type="AudioStream" id=8]
+[ext_resource path="res://characters/components/Explosion.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20.4979, 33.2497 )
@@ -87,3 +88,5 @@ bus = "Lazy"
 [node name="Unlink" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 8 )
 bus = "Lazy"
+
+[node name="Explosion" parent="." instance=ExtResource( 9 )]

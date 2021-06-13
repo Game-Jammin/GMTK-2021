@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://sounds/SFX/Manic Jump 1.wav" type="AudioStream" id=1]
 [ext_resource path="res://characters/ManicShroom.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://ui/fonts/header_font.tres" type="DynamicFont" id=5]
 [ext_resource path="res://sounds/SFX/Manic Grunt 2.wav" type="AudioStream" id=6]
 [ext_resource path="res://sounds/SFX/Manic Grunt 3.wav" type="AudioStream" id=7]
+[ext_resource path="res://characters/components/Explosion.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 18, 20 )
@@ -65,5 +66,8 @@ bus = "Manic"
 [node name="Unlink" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 6 )
 bus = "Manic"
+
+[node name="Explosion" parent="." instance=ExtResource( 8 )]
+shake = false
 [connection signal="mouse_entered" from="." to="." method="_on_ManicShroom_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_ManicShroom_mouse_exited"]
