@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Light step 2 (Freeze) [2021-06-12 213702].wav-ec1f43e5d2f4a324b1750c91321789ef.sample"
+
+[deps]
+
+source_file="res://sounds/SFX/Light step 2 (Freeze) [2021-06-12 213702].wav"
+dest_files=[ "res://.import/Light step 2 (Freeze) [2021-06-12 213702].wav-ec1f43e5d2f4a324b1750c91321789ef.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
