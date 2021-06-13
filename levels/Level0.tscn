@@ -1,13 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://levels/Level.gd" type="Script" id=1]
 [ext_resource path="res://art/temp/icon.png" type="Texture" id=2]
-[ext_resource path="res://characters/ManicShroom.tscn" type="PackedScene" id=3]
-[ext_resource path="res://characters/LazyShroom.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Camera.tscn" type="PackedScene" id=5]
+[ext_resource path="res://RigidBody2D.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Waterfall.tscn" type="PackedScene" id=6]
 [ext_resource path="res://ui/UI.tscn" type="PackedScene" id=7]
-[ext_resource path="res://characters/PanicShroom.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 663.511, 30.2231 )
@@ -15,8 +12,6 @@ extents = Vector2( 663.511, 30.2231 )
 [node name="Level0" type="Node2D"]
 script = ExtResource( 1 )
 level_number = 0
-
-[node name="Camera" parent="." instance=ExtResource( 5 )]
 
 [node name="Waterfall" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1275.93, 783.38 )
@@ -79,11 +74,13 @@ shape = SubResource( 1 )
 
 [node name="UI" parent="." instance=ExtResource( 7 )]
 
-[node name="LazyShroom" parent="." instance=ExtResource( 4 )]
-position = Vector2( 940.157, 684.012 )
+[node name="RigidBody2D" parent="." instance=ExtResource( 3 )]
+position = Vector2( 619.312, 299.586 )
+move_speed = 500.0
+air_speed = 400.0
 
-[node name="ManicShroom" parent="." instance=ExtResource( 3 )]
-position = Vector2( 667.271, 633.788 )
-
-[node name="PanicShroom" parent="." instance=ExtResource( 8 )]
-position = Vector2( 480.722, 674.446 )
+[node name="RigidBody2D2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 619.312, 234.13 )
+player = false
+move_speed = 500.0
+air_speed = 400.0

@@ -32,6 +32,7 @@ func move():
 		if temp_facing_right != facing_right:
 			$CollisionShape2D.position.x = -$CollisionShape2D.position.x
 			$CollisionShape2D2.position.x = -$CollisionShape2D2.position.x
+			$HeldLock/LockCollisionShape.position.x = -$HeldLock/LockCollisionShape.position.x
 
 func move_linked():
 	linked_character.update_direction(direction)

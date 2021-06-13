@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://sounds/SFX/LazyMan Jump1 [2021-06-12 182135].wav" type="AudioStream" id=1]
 [ext_resource path="res://characters/LazyShroom.gd" type="Script" id=2]
@@ -9,12 +9,16 @@
 [ext_resource path="res://sounds/SFX/LazyManGrunt 2 [2021-06-12 182130].wav" type="AudioStream" id=7]
 [ext_resource path="res://sounds/SFX/LazyManGrunt 1 [2021-06-12 182126].wav" type="AudioStream" id=8]
 [ext_resource path="res://characters/components/Explosion.tscn" type="PackedScene" id=9]
+[ext_resource path="res://characters/components/HeldLock.gd" type="Script" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20.4979, 33.2497 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 42.8184, 2.3934 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 41.5353, 2.66298 )
 
 [node name="LazyShroom" type="KinematicBody2D" groups=[
 "Characters",
@@ -90,3 +94,12 @@ stream = ExtResource( 8 )
 bus = "Lazy"
 
 [node name="Explosion" parent="." instance=ExtResource( 9 )]
+
+[node name="HeldLock" type="Area2D" parent="."]
+script = ExtResource( 10 )
+
+[node name="LockCollisionShape" type="CollisionShape2D" parent="HeldLock"]
+position = Vector2( -10.7648, -29.7909 )
+shape = SubResource( 3 )
+[connection signal="body_entered" from="HeldLock" to="HeldLock" method="_on_HeldLock_body_entered"]
+[connection signal="body_exited" from="HeldLock" to="HeldLock" method="_on_HeldLock_body_exited"]
