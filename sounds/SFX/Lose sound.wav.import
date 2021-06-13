@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Lose sound.wav-a83071619088bc1506603768656d35c2.sample"
+
+[deps]
+
+source_file="res://sounds/SFX/Lose sound.wav"
+dest_files=[ "res://.import/Lose sound.wav-a83071619088bc1506603768656d35c2.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
