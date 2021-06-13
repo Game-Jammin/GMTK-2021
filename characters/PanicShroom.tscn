@@ -20,7 +20,7 @@ z_index = 2
 input_pickable = true
 script = ExtResource( 2 )
 speed = 500
-jump_speed = -850
+jump_speed = -900
 friction = 0.3
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
