@@ -19,6 +19,8 @@ export (float) var fuse_length = 10
 
 export (bool) var can_die = false
 
+export (AudioStreamSample) var explode_sound
+
 var can_jump = false
 
 var direction = 0

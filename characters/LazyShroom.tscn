@@ -32,22 +32,21 @@ width = 2.0
 default_color = Color( 1, 1, 1, 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 0, -2 )
+position = Vector2( 0, -2.32353 )
 scale = Vector2( 0.3, 0.3 )
 frames = ExtResource( 5 )
 animation = "IdleLeft"
-frame = 16
-playing = true
 
 [node name="Tween" type="Tween" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 3.65244, 5.14048 )
+position = Vector2( 3.652, 5.14 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2( -11.0926, -28.0021 )
 shape = SubResource( 2 )
+one_way_collision = true
 
 [node name="Radius" type="Sprite" parent="."]
 texture = ExtResource( 3 )
