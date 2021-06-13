@@ -9,7 +9,7 @@
 [ext_resource path="res://sounds/SFX/PanicMan PANIC [2021-06-12 130206].wav" type="AudioStream" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 24.2474, 32 )
+extents = Vector2( 24.247, 28 )
 
 [node name="PanicShroom" type="KinematicBody2D" groups=[
 "Characters",
@@ -18,7 +18,7 @@ extents = Vector2( 24.2474, 32 )
 input_pickable = true
 script = ExtResource( 2 )
 speed = 500
-jump_speed = -700
+jump_speed = -900
 friction = 0.3
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -28,7 +28,7 @@ animation = "JumpLeft"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 7.61046, 10.9765 )
+position = Vector2( 7.61, 13 )
 shape = SubResource( 1 )
 
 [node name="FuseTimer" type="Timer" parent="."]
